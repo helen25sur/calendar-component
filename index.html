@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>JS Modules</title>
+  <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><script defer src="bundle.js"></script><link href="index.css" rel="stylesheet"></head>
+
+<body>
+  <div class="change-theme_block">
+    <input type="checkbox" name="change-theme" id="change-theme">
+    <label class="change-theme_visual-btn change-theme_visual-btn__light" for="change-theme">
+      <span class="inner-switcher"></span>
+    </label>
+  </div>
+  <div class="calendar-wrapper">
+
+    <header class="calendar-header">
+      <div class="months-wrapper">
+        <button class="btn-month btn-prev"></button>
+        <ul class="months-list" data-name="month" id="select-month">
+          <li data-value="January" class="hidden month-item">January</li>
+          <li data-value="February" class="month-item current-month">February</li>
+          <li data-value="March" class="hidden month-item">March</li>
+          <li data-value="April" class="hidden month-item">April</li>
+          <li data-value="May" class="hidden month-item">May</li>
+          <li data-value="June" class="month-item hidden">June</li>
+          <li data-value="July" class="hidden month-item">July</li>
+          <li data-value="August" class="hidden month-item">August</li>
+          <li data-value="September" class="hidden month-item">September</li>
+          <li data-value="October" class="hidden month-item">October</li>
+          <li data-value="November" class="hidden month-item">November</li>
+          <li data-value="December" class="hidden month-item">December</li>
+        </ul>
+        <button class="btn-month btn-next"></button>
+      </div>
+      <div class="year-wrapper">
+        <select class="years-list" name="year" id="year-select">
+          <option value="2022" class="year-item">2022</option>
+          <option value="2023" class="year-item" selected>2023</option>
+          <option value="2024" class="year-item">2024</option>
+          <option value="2025" class="year-item">2025</option>
+          <option value="2026" class="year-item">2026</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="calendar-body">
+      <table class="calendar-table">
+        <thead>
+          <tr class="days-title">
+            <th class="day-name">Mo</th>
+            <th class="day-name">Tu</th>
+            <th class="day-name">We</th>
+            <th class="day-name">Th</th>
+            <th class="day-name">Fr</th>
+            <th class="day-name">Sa</th>
+            <th class="day-name">Su</th>
+          </tr>
+        </thead>
+        <tr class="weeks-line">
+          <td data-dayWeek="1" class="hidden day-number"></td>
+          <td data-dayWeek="2" class="hidden day-number today"></td>
+          <td data-dayWeek="3" class="hidden day-number"></td>
+          <td data-dayWeek="4" class="hidden day-number"></td>
+          <td data-dayWeek="5" class="hidden day-number inactive-day"></td>
+          <td data-dayWeek="6" class="hidden day-number inactive-day"></td>
+          <td data-dayWeek="0" class="hidden day-number inactive-day"></td>
+        </tr>
+        <tr class="weeks-line">
+          <td data-dayWeek="1" class="day-number inactive-day">30</td>
+          <td data-dayWeek="2" class="day-number inactive-day">31</td>
+          <td data-dayWeek="3" class="day-number">1</td>
+          <td data-dayWeek="4" class="day-number">2</td>
+          <td data-dayWeek="5" class="day-number">3</td>
+          <td data-dayWeek="6" class="day-number">4</td>
+          <td data-dayWeek="0" class="day-number">5</td>
+        </tr>
+        <tr class="weeks-line">
+          <td data-dayWeek="1" class="day-number">6</td>
+          <td data-dayWeek="2" class="day-number">7</td>
+          <td data-dayWeek="3" class="day-number">8</td>
+          <td data-dayWeek="4" class="day-number">9</td>
+          <td data-dayWeek="5" class="day-number">10</td>
+          <td data-dayWeek="6" class="day-number">11</td>
+          <td data-dayWeek="0" class="day-number">12</td>
+        </tr>
+        <tr class="weeks-line">
+          <td data-dayWeek="1" class="day-number">13</td>
+          <td data-dayWeek="2" class="day-number">14</td>
+          <td data-dayWeek="3" class="day-number">15</td>
+          <td data-dayWeek="4" class="day-number">16</td>
+          <td data-dayWeek="5" class="day-number">17</td>
+          <td data-dayWeek="6" class="day-number">18</td>
+          <td data-dayWeek="0" class="day-number">19</td>
+        </tr>
+        <tr class="weeks-line">
+          <td data-dayWeek="1" class="day-number">20</td>
+          <td data-dayWeek="2" class="day-number">21</td>
+          <td data-dayWeek="3" class="day-number">22</td>
+          <td data-dayWeek="4" class="day-number">23</td>
+          <td data-dayWeek="5" class="day-number">24</td>
+          <td data-dayWeek="6" class="day-number">25</td>
+          <td data-dayWeek="0" class="day-number">26</td>
+        </tr>
+        <tr class="weeks-line">
+          <td data-dayWeek="1" class="day-number">27</td>
+          <td data-dayWeek="2" class="day-number today">28</td>
+          <td data-dayWeek="3" class="day-number">29</td>
+          <td data-dayWeek="4" class="day-number">30</td>
+          <td data-dayWeek="5" class="day-number inactive-day">1</td>
+          <td data-dayWeek="6" class="day-number inactive-day">2</td>
+          <td data-dayWeek="0" class="day-number inactive-day">3</td>
+        </tr>
+        <tr class="weeks-line">
+          <td data-dayWeek="1" class="hidden day-number"></td>
+          <td data-dayWeek="2" class="hidden day-number today"></td>
+          <td data-dayWeek="3" class="hidden day-number"></td>
+          <td data-dayWeek="4" class="hidden day-number"></td>
+          <td data-dayWeek="5" class="hidden day-number inactive-day"></td>
+          <td data-dayWeek="6" class="hidden day-number inactive-day"></td>
+          <td data-dayWeek="0" class="hidden day-number inactive-day"></td>
+        </tr>
+      </table>
+    </main>
+    <div class="calendar-bg"></div>
+  </div>
+</body>
+
+</html>

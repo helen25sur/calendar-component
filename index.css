@@ -1,0 +1,233 @@
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./scss/style.scss ***!
+  \**********************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;500;600&display=swap);
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./scss/style.scss (1) ***!
+  \**************************************************************************************************************/
+:root {
+  --bg_Color: linear-gradient(180deg, #F1F7FF 0%, #EDF2F9 100%);
+  --bgCalendar: linear-gradient(142.42deg, rgba(254, 248, 255, 18%) 1.79%, rgba(254, 248, 255, 17%) 100.42%);
+  --shadow_Calendar: inset -5px -5px 15px rgba(0, 0, 0, 0.12), inset 5px 5px 12px #FFFFFF;
+  --bgBtn: rgba(71, 76, 89, 0.05);
+  --BgImage_Btn: url(bcf8bc6b5d1c5c5243cc.svg);
+  --fontColor: #474C59;
+  --dayName_fontColor: #FF9330;
+  --inactive_fontColor: rgba(52, 56, 65, 0.41);
+}
+
+.change-theme_block {
+  position: absolute;
+  right: 45px;
+  top: 25px;
+}
+.change-theme_block #change-theme {
+  width: 100px;
+  height: 50px;
+  display: none;
+}
+.change-theme_block .change-theme_visual-btn {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #FFA800 0%, #FF4D00 100%);
+  box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
+}
+.change-theme_block .change-theme_visual-btn .inner-switcher {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-image: url(7107e66bb870375ba53d.png), var(--bgCalendar);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
+}
+
+@keyframes switcherThemeDark {
+  100% {
+    transform: translateX(38px);
+  }
+}
+@keyframes switcherThemeLight {
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes changeBgColor {
+  100% {
+    background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #898989 0%, #232323 100%);
+    box-shadow: 1px 8px 11px -1px rgba(107, 107, 107, 0.47);
+  }
+}
+@keyframes returnBgColor {
+  100% {
+    background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #FFA800 0%, #FF4D00 100%);
+    box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 99vh;
+  padding: 0;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 36% 56%, 61% 69%, 62% 27%, center;
+  font-size: 16px;
+  color: var(--fontColor);
+  font-family: "Prompt", sans-serif;
+}
+@media screen and (max-width: 1920px) {
+  body {
+    background-position: 36% 56%, 61% 69%, 62% 27%, center;
+  }
+}
+@media screen and (max-width: 1370px) {
+  body {
+    background-position: 30% 56%, 64% 76%, 68% 22%, center;
+  }
+}
+@media screen and (max-width: 1280px) {
+  body {
+    background-position: 28% 64%, 66% 75%, 67% 20%, center;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    background-position: 12% 64%, 80% 87%, 80% 16%, center;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-position: 0% 64%, 95% 97%, 96% 5%, center;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    background-position: -35% 62%, 102% 87%, 97% 14%, center;
+  }
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.calendar-wrapper {
+  padding: 28px 37px;
+  width: 373px;
+  height: 382px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+@media screen and (max-width: 400px) {
+  .calendar-wrapper {
+    width: 325px;
+    height: 345px;
+  }
+}
+
+.calendar-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: var(--bgCalendar);
+  box-shadow: var(--shadow_Calendar);
+  backdrop-filter: blur(85px);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.calendar-header {
+  display: flex;
+}
+.calendar-header .months-wrapper {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+.calendar-header .months-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  z-index: 3;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.calendar-header .btn-month {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: var(--bgBtn);
+  background-image: var(--BgImage_Btn);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+.calendar-header .btn-next {
+  transform: rotate(180deg);
+}
+.calendar-header .year-wrapper {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.calendar-header .years-list {
+  padding-right: 10px;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.calendar-body {
+  padding-top: 24px;
+  height: 86%;
+}
+.calendar-body .calendar-table {
+  width: 100%;
+  height: 100%;
+}
+.calendar-body .day-name {
+  font-weight: 600;
+  color: var(--dayName_fontColor);
+}
+.calendar-body .day-number {
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.calendar-body .day-number.inactive-day {
+  color: var(--inactive_fontColor);
+}
+.calendar-body .day-number.today {
+  background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #FFA800 0%, #FF4D00 100%);
+  box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
+  border-radius: 8px;
+  color: #fff;
+}
+.calendar-body .day-number:hover, .calendar-body .day-number:active {
+  border: 1px solid var(--dayName_fontColor);
+  border-radius: 8px;
+}
