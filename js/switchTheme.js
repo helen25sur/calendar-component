@@ -3,9 +3,9 @@ const label = document.querySelector('.change-theme_visual-btn');
 const innerSwitcher = label.querySelector('.inner-switcher');
 innerSwitcher.style.backgroundImage = `url('${'./img/icons/icons8-sun-30.png'}'), var(--bgCalendar)`;
 
-document.body.style.backgroundImage = `url('${'../img/1_3.png'}'), 
-url('${'../img/3_1.png'}'), 
-url('${'../img/5_3.png'}'), 
+document.body.style.backgroundImage = `url('${'./img/1_3.png'}'), 
+url('${'./img/3_1.png'}'), 
+url('${'./img/5_3.png'}'), 
 var(--bg_Color)`;
 
 const objDarkTheme = {
