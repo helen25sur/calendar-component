@@ -1,0 +1,11 @@
+// LIGHT THEME
+:root {
+  --bg_Color: linear-gradient(180deg, #F1F7FF 0%, #EDF2F9 100%);
+  --bgCalendar: linear-gradient(142.42deg, rgba(254, 248, 255, 18%) 1.79%, rgba(254, 248, 255, 17%) 100.42%);
+  --shadow_Calendar: inset -5px -5px 15px rgba(0, 0, 0, 0.12), inset 5px 5px 12px #FFFFFF;
+  --bgBtn: rgba(71, 76, 89, 0.05);
+  --BgImage_Btn: url('../img/icons/prev.svg');
+  --fontColor: #474C59;
+  --dayName_fontColor: #FF9330;
+  --inactive_fontColor: rgba(52, 56, 65, 0.41);
+}

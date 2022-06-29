@@ -1,0 +1,61 @@
+.change-theme_block {
+  position: absolute;
+  right: 45px;
+  top: 25px;
+
+  #change-theme {
+    width: 100px;
+    height: 50px;
+    display: none;
+  }
+
+  .change-theme_visual-btn {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #FFA800 0%, #FF4D00 100%);
+    box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
+
+    & .inner-switcher {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-image: url('../img/icons/icons8-sun-30.png'), var(--bgCalendar);
+      background-repeat: no-repeat, no-repeat;
+      background-position: center, center;
+      box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
+    }
+  }
+}
+
+@keyframes switcherThemeDark {
+  100% {
+    transform: translateX(38px);
+  }
+}
+
+@keyframes switcherThemeLight {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes changeBgColor {
+  100% {
+    background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #898989 0%, #232323 100%);
+    box-shadow: 1px 8px 11px -1px rgb(107 107 107 / 47%);
+  }
+}
+
+@keyframes returnBgColor {
+  100% {
+    background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #FFA800 0%, #FF4D00 100%);
+    box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
+  }
+}
