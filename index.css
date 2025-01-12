@@ -1,10 +1,6 @@
-/*!**********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./scss/style.scss ***!
-  \**********************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;500;600&display=swap);
-/*!**************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./scss/style.scss (1) ***!
-  \**************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/style.scss ***!
+  \*****************************************************************************************************************************************************************************/
 :root {
   --bg_Color: linear-gradient(180deg, #F1F7FF 0%, #EDF2F9 100%);
   --bgCalendar: linear-gradient(142.42deg, rgba(254, 248, 255, 18%) 1.79%, rgba(254, 248, 255, 17%) 100.42%);
@@ -21,11 +17,13 @@
   right: 45px;
   top: 25px;
 }
+
 .change-theme_block #change-theme {
   width: 100px;
   height: 50px;
   display: none;
 }
+
 .change-theme_block .change-theme_visual-btn {
   position: relative;
   display: block;
@@ -35,6 +33,7 @@
   background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #FFA800 0%, #FF4D00 100%);
   box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
 }
+
 .change-theme_block .change-theme_visual-btn .inner-switcher {
   content: "";
   position: absolute;
@@ -84,6 +83,7 @@ body {
   color: var(--fontColor);
   font-family: "Prompt", sans-serif;
 }
+
 @media screen and (max-width: 1920px) {
   body {
     background-position: 36% 56%, 61% 69%, 62% 27%, center;
@@ -114,7 +114,6 @@ body {
     background-position: -35% 62%, 102% 87%, 97% 14%, center;
   }
 }
-
 .hidden {
   display: none;
   opacity: 0;
@@ -130,13 +129,13 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 20px;
 }
+
 @media screen and (max-width: 400px) {
   .calendar-wrapper {
     width: 325px;
     height: 345px;
   }
 }
-
 .calendar-bg {
   position: absolute;
   top: 0;
@@ -155,11 +154,13 @@ body {
 .calendar-header {
   display: flex;
 }
+
 .calendar-header .months-wrapper {
   display: flex;
   width: 60%;
   justify-content: space-between;
 }
+
 .calendar-header .months-list {
   padding: 0;
   margin: 0;
@@ -171,6 +172,7 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
+
 .calendar-header .btn-month {
   width: 33px;
   height: 33px;
@@ -181,15 +183,18 @@ body {
   background-position: center;
   border: none;
 }
+
 .calendar-header .btn-next {
   transform: rotate(180deg);
 }
+
 .calendar-header .year-wrapper {
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
 .calendar-header .years-list {
   padding-right: 10px;
   border: none;
@@ -204,29 +209,35 @@ body {
   padding-top: 24px;
   height: 86%;
 }
+
 .calendar-body .calendar-table {
   width: 100%;
   height: 100%;
 }
+
 .calendar-body .day-name {
   font-weight: 600;
   color: var(--dayName_fontColor);
 }
+
 .calendar-body .day-number {
   text-align: center;
   width: 35px;
   height: 35px;
   cursor: pointer;
 }
+
 .calendar-body .day-number.inactive-day {
   color: var(--inactive_fontColor);
 }
+
 .calendar-body .day-number.today {
   background: radial-gradient(82.86% 82.86% at 28.57% 17.14%, #FFA800 0%, #FF4D00 100%);
   box-shadow: 1px 8px 11px -1px rgba(223, 81, 21, 0.47);
   border-radius: 8px;
   color: #fff;
 }
+
 .calendar-body .day-number:hover, .calendar-body .day-number:active {
   border: 1px solid var(--dayName_fontColor);
   border-radius: 8px;
