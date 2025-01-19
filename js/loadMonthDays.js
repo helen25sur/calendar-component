@@ -13,7 +13,9 @@ const weekLines = document.querySelectorAll('.weeks-line');
 
 export function getCurrentStateDate() {
   const currentStateMonth = document.querySelector('.current-month').dataset.value;
-  const currentStateYear = document.querySelector('.year-item[selected]').value;
+  console.log(currentStateMonth);
+  const currentStateYear = document.querySelector('.year-item[selected="true"]').value;
+  console.log(currentStateYear);
 
   const needDate = new Date(`${currentStateMonth}, ${currentStateYear}`);
   const month = needDate.getMonth();
