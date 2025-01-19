@@ -5,6 +5,7 @@ const today = new Date();
 const currentDay = today.getDate();
 const currentMonth = today.getMonth();
 const currentYear = today.getFullYear();
+console.log(currentYear);
 
 const MSinDay = 86400000;
 const allCells = document.querySelectorAll('.day-number');

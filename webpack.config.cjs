@@ -2,6 +2,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { default: loader } = require('sass-loader');
 
 module.exports = {
   entry: './js/index.js',
@@ -20,8 +21,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      },
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]},
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
